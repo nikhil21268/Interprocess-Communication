@@ -2,11 +2,56 @@
 
 ## Interprocess Communication (IPC) Programs
 
+This repository contains implementations of the problem statement titled "Interprocess Communication." The goal is to exchange information between two programs, P1 and P2, using three different IPC mechanisms: Unix domain sockets, FIFOs, and shared memory.
+
+### Problem Statement Overview
+
+The problem statement requires the following functionalities:
+
+1. **P1 Program:**
+   - Generate an array of 50 random strings.
+   - Send groups of five consecutive elements of the array to P2 with corresponding IDs (indices).
+   - Receive acknowledgment from P2 containing the highest ID received.
+   - Send the next batch of strings, starting from the successor of the acknowledged ID.
+
+2. **P2 Program:**
+   - Accept received strings and print their IDs and content.
+   - Send back the highest ID received to acknowledge the strings.
+
 This repository contains three programs showcasing different Interprocess Communication mechanisms in C:
 
 1. **Unix Domain Sockets**
 2. **FIFO (First In, First Out)**
 3. **Shared Memory**
+
+### Implementation Details
+
+#### 1. Unix Domain Sockets
+
+- **P1 Program (P1socket.c):**
+  - Generates and sends strings using Unix domain sockets.
+
+- **P2 Program (P2socket.c):**
+  - Accepts strings, prints IDs and content.
+  - Sends back the highest received ID.
+
+#### 2. FIFOs
+
+- **P1 Program (P1FIFO.c):**
+  - Generates and sends strings using FIFOs.
+
+- **P2 Program (P2FIFO.c):**
+  - Accepts strings, prints IDs and content.
+  - Sends back the highest received ID.
+
+#### 3. Shared Memory
+
+- **P1 Program (LMsender.c):**
+  - Generates and sends strings using shared memory.
+
+- **P2 Program (LMreceiver.c):**
+  - Accepts strings, prints IDs and content.
+  - Sends back the highest received ID.
 
 ### 1. Unix Domain Sockets
 
@@ -70,5 +115,17 @@ To run, use the following commands in separate terminals:
 - For Unix Domain Sockets, run P2socket first and then P1socket.
 - For FIFO, run P1FIFO first and then P2FIFO.
 - For Shared Memory, run LMreceiver first and then LMsender.
+
+### Compilation
+
+A Makefile is provided to compile all source files:
+
+```bash
+make all
+```
+
+### Time Measurement
+
+The programs output the time required to finish receiving the acknowledgment of all 50 strings in each case.
 
 **Enjoy exploring interprocess communication mechanisms!**
