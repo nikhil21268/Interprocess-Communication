@@ -1,10 +1,8 @@
-# Interprocess-Communication
+# Interprocess Communication (IPC)
 ## Operating Systems Assignment 
-Created Processes which communicate with each other using Unix Domain Sockets, FIFOs and Shared Memory. 
+* Created Processes which communicate with each other using Unix Domain Sockets, FIFOs and Shared Memory. This repository contains implementations of the problem statement titled "Interprocess Communication." 
+* The goal is to exchange information between two programs, P1 and P2, using three different IPC mechanisms: Unix domain sockets, FIFOs, and shared memory.
 
-## Interprocess Communication (IPC) Programs
-
-This repository contains implementations of the problem statement titled "Interprocess Communication." The goal is to exchange information between two programs, P1 and P2, using three different IPC mechanisms: Unix domain sockets, FIFOs, and shared memory.
 
 ### Problem Statement Overview
 
