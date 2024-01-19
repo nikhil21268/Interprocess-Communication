@@ -1,4 +1,5 @@
-# Interprocess-Communication | Operating Systems Assignment 
+# Interprocess-Communication
+## Operating Systems Assignment 
 Created Processes which communicate with each other using Unix Domain Sockets, FIFOs and Shared Memory. 
 
 ## Interprocess Communication (IPC) Programs
